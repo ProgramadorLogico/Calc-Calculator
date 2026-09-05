@@ -9,7 +9,6 @@ public class Main {
         String versaoDoProjeto = "1.0";
         String nomeDoProjeto = "Calc Calculator";
         String criadorDoProjeto = "Programador Lógico";
-        String 
         // Listas
         ArrayList<String> comandosExistentes = new ArrayList<> (Arrays.asList("1 - Fazer uma operação", "2 - Informações do projeto", "3 - Fechar programa"));
         // Apresentação ao usuário
@@ -23,17 +22,37 @@ public class Main {
         for (int i = 0; i < comandosExistentes.size(); i++) {
             System.out.println(comandosExistentes.get(i));
         }
-        // Pegar entrada do usuário
-        String comandoSelecionado = scanner.nextLine();
-        switch (comandoSelecionado) {
-            case "1":
-                // Fazer depois
-                print(2, "");
-                print(1, "Em breve!");
-                break;
-            case "2":
-                print(2, "");
-                print(1, "");
+        while (true) {
+            // Pegar entrada do usuário
+            String comandoSelecionado = scanner.nextLine();
+            // Fecha o enter
+            scanner.nextLine();
+            // Verifica qual comando foi selecionado
+            switch (comandoSelecionado) {
+                case "1":
+                    // Fazer depois
+                    print(2, "");
+                    print(1, "Em breve!");
+                    break;
+                case "2":
+                    // Exibi as informações do projeto
+                    print(2, "");
+                    System.out.println("Informações do projeto:");
+                    print(1, "");
+                    System.out.println("Nome do projeto: " + nomeDoProjeto);
+                    System.out.println("Versão do projeto: " + versaoDoProjeto);
+                    System.out.println("Criador do projeto: " + criadorDoProjeto);
+                    break;
+                case "3":
+                    // Fecha o programa
+                    System.exit(0);
+                    break;
+                default:
+                    // Retorna um aviso de comando inválido
+                    print(2, "");
+                    print(3, "O comando digitado não existe");
+                    break;
+            }
         }
     }
     public static int subtracao(int A, int B) {
