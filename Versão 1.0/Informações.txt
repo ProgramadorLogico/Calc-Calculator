@@ -2,4 +2,10 @@ Informações básicas:
 
 Criador do projeto: Programador Logico;
 Ano de criação: 4 de setembro de 2026 (04/09/2026);
-Versão do projeto: A1.0
+Versão do projeto: 1.0
+Ferramenta utilizada: VSCode
+
+Informações sobre a versão:
+
+    Está é a versão 1.0 do projeto Calc Calculator, está é uma versão especial por ser
+a primeira do projeto.
