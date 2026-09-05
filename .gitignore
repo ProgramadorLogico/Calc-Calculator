@@ -1,5 +1,6 @@
 # Arquivo copilado
 *.class
 
-# Arquivos de texto
-Notas.txt
+# Pastas
+/.vscode/
+/Avisos/
