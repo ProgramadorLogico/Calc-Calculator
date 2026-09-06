@@ -42,17 +42,18 @@ public class Main {
 		    print(1, "Digite o segundo número e aperte enter:");
 		    double segundoNumero = scanner.nextDouble();
 		    segundoNumeroValor = segundoNumero;
-		    if (operacaoValor == "-") {
-		    	subtracao(primeiroNumero, segundoNumero);
-		    } else if (operacaoValor.equals("+")) {
-			adicao(primeiroNumero, segundoNumero);
-		    } else if (operacaoValor == "*") {
-			multiplicacao(primeiroNumero, segundoNumero);
-		    } else if (operacaoValor == "/") {
-		   	System.out.println(primeiroNumero / segundoNumero);
-		    } else {
-			print(2, "");
-			print(1, "Operação não encontrada");
+		    switch (operacaoValor):
+		   	case "+":
+		    	    System.out.println("Este é o resultado: " + primeiroNumero + segundoNumero);
+			case "*":
+			    System.out.println("Este é o resultado: " + primeiroNumero * segundoNumero );
+			case "-":
+			    System.out.println("Este é o resultado: " + primeiroNumero - segundoNumero);
+			case "/":
+		   	    System.out.println("Este é o resultado: " + primeiroNumero / segundoNumero);
+		    	default:
+			    print(2, "");
+			    print(1, "Operação não encontrada");
 		    }
 		    scanner.nextLine();
 		    listarComandos();
