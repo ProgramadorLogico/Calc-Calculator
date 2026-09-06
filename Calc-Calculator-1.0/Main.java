@@ -11,6 +11,7 @@ public class Main {
         String versaoDoProjeto = "1.0";
         String nomeDoProjeto = "Calc Calculator";
         String criadorDoProjeto = "Programador Lógico";
+	String resultado = "Este é o resultado: ";
         // Apresentação ao usuário
 	print(1, "================================================");
         print(1, "");
@@ -29,31 +30,41 @@ public class Main {
 		    double primeiroNumeroValor;
 		    double segundoNumeroValor;
 		    String operacaoValor;
+		    limparTerminal();
 		    print(2, "");
 		    print(1, "Digite o primeiro número e aperte enter:");
                     double primeiroNumero = scanner.nextDouble();
 		    primeiroNumeroValor = primeiroNumero;
 		    scanner.nextLine();
+		    limparTerminal();
 		    print(2, "");
-    		    print(1, "Digite a operação e aperte enter: (/, *, -, +)");
-		    String operacao = scanner.next().trim();
+		    print(1, "1. +");
+		    print(1, "2. -");
+		    print(1, "3. *");
+		    print(1, "4. /");
+		    print(2, "");
+    		    print(1, "Selecione uma das operações acima e aperte enter:");
+		    String operacao = scanner.nextLine().trim();
 		    operacaoValor = operacao;
+		    limparTerminal();
 		    print(2, "");
 		    print(1, "Digite o segundo número e aperte enter:");
 		    double segundoNumero = scanner.nextDouble();
 		    segundoNumeroValor = segundoNumero;
-		    switch (operacaoValor):
-		   	case "+":
-		    	    System.out.println("Este é o resultado: " + primeiroNumero + segundoNumero);
-			case "*":
-			    System.out.println("Este é o resultado: " + primeiroNumero * segundoNumero );
-			case "-":
-			    System.out.println("Este é o resultado: " + primeiroNumero - segundoNumero);
-			case "/":
-		   	    System.out.println("Este é o resultado: " + primeiroNumero / segundoNumero);
-		    	default:
-			    print(2, "");
-			    print(1, "Operação não encontrada");
+		    limparTerminal();
+		    switch (operacao) {
+			case "1":
+		    	    System.out.println(resultado + (primeiroNumero + segundoNumero));
+			    break;
+		    	case "2":
+                            System.out.println(resultado + (primeiroNumero - segundoNumero));
+			    break;
+                        case "3":
+                            System.out.println(resultado + (primeiroNumero * segundoNumero));
+                            break;
+                        case "4":
+			    System.out.println(resultado + (primeiroNumero / segundoNumero));
+			    break;
 		    }
 		    scanner.nextLine();
 		    listarComandos();
@@ -81,19 +92,6 @@ public class Main {
             }
         }
     }
-    public static double subtracao(double A, double B) {
-        return A - B;
-    }
-    public static double adicao(double A, double B) {
-        return A + B;
-    }
-    public static double multiplicacao(double A, double B) {
-        return A * B;
-    }
-    public static double divisao(double A, double B) {
-        return A / B;
-    }
-
     public static void print(int tipo, String texto) {
         if (tipo == 1) {
             System.out.println(texto);
@@ -112,5 +110,8 @@ public class Main {
 	for (int i = 0; i < comandosExistentes.size(); i++) {
 	    System.out.println(comandosExistentes.get(i));
 	}
+    }
+    public static void limparTerminal() {
+	System.out.print("\033[H\033[2J");
     }
 }
