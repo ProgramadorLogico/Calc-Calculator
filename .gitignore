@@ -4,3 +4,6 @@
 # Pastas
 /.vscode/
 /Avisos/
+
+# Arquivos temporários
+*.swp
