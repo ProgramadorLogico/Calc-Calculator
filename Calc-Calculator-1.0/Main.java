@@ -28,15 +28,35 @@ public class Main {
                 case "1":
 		    double primeiroNumeroValor;
 		    double segundoNumeroValor;
-		    String operacao;
-                    double primeiroNumero = new scanner.nextDouble();
-		    if (primeiroNumero.hasNextInt || primeiroNumero.hasNextDouble) {
-			primeiroNumero = primeiroNumeroValor;
+		    String operacaoValor;
+		    print(2, "");
+		    print(1, "Digite o primeiro número e aperte enter:");
+                    double primeiroNumero = scanner.nextDouble();
+		    primeiroNumeroValor = primeiroNumero;
+		    scanner.nextLine();
+		    print(2, "");
+    		    print(1, "Digite a operação e aperte enter: (/, *, -, +)");
+		    String operacao = scanner.next().trim();
+		    operacaoValor = operacao;
+		    print(2, "");
+		    print(1, "Digite o segundo número e aperte enter:");
+		    double segundoNumero = scanner.nextDouble();
+		    segundoNumeroValor = segundoNumero;
+		    if (operacaoValor == "-") {
+		    	subtracao(primeiroNumero, segundoNumero);
+		    } else if (operacaoValor.equals("+")) {
+			adicao(primeiroNumero, segundoNumero);
+		    } else if (operacaoValor == "*") {
+			multiplicacao(primeiroNumero, segundoNumero);
+		    } else if (operacaoValor == "/") {
+		   	System.out.println(primeiroNumero / segundoNumero);
 		    } else {
 			print(2, "");
-			print(3, "O valor digitado não é válido!");
+			print(1, "Operação não encontrada");
 		    }
-		    listarComandos(); break;
+		    scanner.nextLine();
+		    listarComandos();
+		    break;
                 case "2":
                     // Exibi as informações do projeto
                     print(2, "");
@@ -60,9 +80,19 @@ public class Main {
             }
         }
     }
-    public static int subtracao(int A, int B) {
+    public static double subtracao(double A, double B) {
         return A - B;
     }
+    public static double adicao(double A, double B) {
+        return A + B;
+    }
+    public static double multiplicacao(double A, double B) {
+        return A * B;
+    }
+    public static double divisao(double A, double B) {
+        return A / B;
+    }
+
     public static void print(int tipo, String texto) {
         if (tipo == 1) {
             System.out.println(texto);
