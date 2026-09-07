@@ -1,0 +1,25 @@
+Olá usuários, se vocês estiverem lendo isso vocês provalvelmente estão utilizando a versão
+2.0 do Calc Calculator, bem-vindos então.
+
+==========================================================================================
+									Informações básica
+==========================================================================================
+
+Criador do projeto: Programador Lógico
+Ferramenta de desenvolvimento: Micro
+Versão do projeto: 2.0
+
+==========================================================================================
+											Sobre
+==========================================================================================
+
+	Este projeto está sendo desenvolvido independentemente por mim, agradeço pela
+compressão, este é o link de download da versão 2.0:
+https://github.com/ProgramadorLogico/Calc-Calculator/tree/main/Calc-Calculator-2.0, 
+agradeço que tenha baixado está versão!
+	Fico muito feliz em saber que alguém baixou e testou meus projeto, obrigado, caso
+queira, me dê uma sugestão de melhoria para versões ativas, beleza?
+
+Abraços, 
+
+Programador Lógico 
