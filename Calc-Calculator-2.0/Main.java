@@ -8,8 +8,11 @@ public class Main {
 	// Corpo principal
 	public static void main(String[] args) {
 		// Declaração de variáveis e listas
-		ArrayList<String> informacoesDoProjeto = new ArrayList<> (Arrays.asList("Nome do projeto - Calc Calculator", "Dara de criação - 6/09/2026", "Criador - Programador Lógico"));
+		ArrayList<String> informacoesDoProjeto = new ArrayList<> (Arrays.asList("Nome do projeto - Calc Calculator", "Data de criação - 06/09/2026", "Criador - Programador Lógico"));
+		ArrayList<String> historicoDeCalculos = new ArrayList<> ();
 		Scanner scanner = new Scanner(System.in);
+		boolean entradaValida = false;
+		char operacao;
 		// Loop principal
 		while (true) {
 			// Apresentação
@@ -30,10 +33,45 @@ public class Main {
 				case "1":
 					print("Digite o primeiro número:");
 					String primeiroNumeroEntrada = scanner.nextLine();
+					while (!entradaValida) {
+						try {
+							int primeiroNumeroFinal = Integer.parseInt(primeiroNumeroEntrada);
+							entradaValida = true;
+						} catch (NumberFormatException e) {
+							espacadorDeTexto();
+							print("Você não digitou um número!");
+						}
+					}
+					entradaValida = false;
 					print("Digite o segundo número:");
 					String segundoNumeroEntrada = scanner.nextLine();
+					while (!entradaValida) {
+						try {
+							int segundoNumeroFinal = Integer.parseInt(segundoNumeroEntrada);
+							entradaValida = true;
+						} catch (NumberFormatException e) {
+							espacadorDeTexto();
+							print("Você não digitou um número!");
+						}
+					}
+					entradaValida = false;
 					print("Digite a operação (+, -, *, /):");
 					String operacaoEntrada = scanner.nextLine();
+					while (!entradaValida) {
+						try {
+							char operacaoFinal = operacaoEntrada.charAt(0);;
+							entradaValida = true;
+						} catch (NumberFormatException e) {
+							espacadorDeTexto();
+							print("Você não digitou uma operação!");
+						}
+					}
+					espacadorDeTexto();
+					switch (operacaoFinal) {
+						case '+':
+							System.out.println("Este é o resultado: " + (primeiroNumeroFinal + segundoNumeroFinal));
+							break;
+					}
 					break;
 				// Caso de registro de cálculos
 				// Caso de sobre o projeto
